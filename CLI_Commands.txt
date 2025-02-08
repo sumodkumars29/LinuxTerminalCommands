@@ -1,0 +1,119 @@
+sudo mount /dev/sda3 /mnt
+sudo mount /dev/sda4 /mnt
+
+sudo mount --bind /dev /mnt/dev
+sudo mount --bind /proc /mnt/proc
+sudo mount --bind /sys /mnt/sys
+sudo mount --bind /run /mnt/run
+
+sudo chroot /mnt (do what needs to be done, then) --> exit
+
+
+
+sudo apt install --reinstall xerver-xorg xserver-xorg-video-intel
+sudo dpkg-reconfigure xserver-xorg
+
+sudo update-grub
+sudo grub install /dev/sda
+
+sudo wipefs -a /dev/sda
+sudo dd if=/dev/zero of=/dev/sda bs=1M count=10
+sudo dd if=/dev/zero of=/dev/sda bs=1M count=10 seek=$(($(blockdev --getsz /dev/sda) / 2048 - 10 ))
+
+sudo fdsk -l /dev/sda
+
+
+sudo apt update && sudo apt full-upgrade
+
+lspci | grep -i network
+sudo lshw -C network
+sudo apt install bcmwl-kernel-source
+sudo systemctl start NetworkManager
+sudo systemctl enable NetworkManager
+ping -c 4 google.com
+
+sudo apt install gimp
+gimp --version
+sudo apt remove --purge gimp
+
+sudo apt install libreoffice
+libreoffice --version
+sudo apt remove --purge libreoffice
+
+sudo apt install vlc okular
+
+sudo apt install firefox
+
+wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+sudo apt install ./google-chrome-stable_current_amd64.deb
+sudo apt install google-chrome-stable
+sudo apt purge google-chrome-stable
+
+cd /etc/apt/preferences.d
+nano nosnap.pref
+sudo rm /etc/apt/preferences.d/nosnap.pref
+Below is the data found in /etc/apt/preferences.d/nosnap.pref
+
+"Package: snapd
+Pin: release a=*
+Pin-Priority: -10"
+
+sudo apt update && sudo apt install snapd
+sudo snap install snap-store
+
+Using Snap Management – Command-line as a guide, perform the following steps using Terminology:
+
+List Install Packages
+	snap list --all --color auto
+Remove all Packages. For each item listed in the output of step #1, run
+	sudo snap remove <package-name>
+Remove Snapd
+	sudo apt purge snapd
+Remove the snap folder
+	rm -rf ~/snap
+Remove snap .desktop file(s)
+	rm ~/.local/share/applications/snap*
+	rm ~/Desktop/snap*
+
+sudo systemctl enable --now snapd
+sudo nano /etc/apt/sources.list
+sudo snap install core20
+sudo snap install chatgpt-desktop
+sudo snap install whatsapp-electron
+sudo snap install code --classic
+
+lsblk -f
+lscpu
+uname
+uname -m
+sudo apt autoremove
+sudo apt clean
+sudo reboot
+
+
+
+cnrdrvcups-ufr2-uk_6.00-1.06_arm64.deb
+
+   sudo apt install cups
+   sudo systemctl enable cups
+   sudo systemctl start cups
+   sudo systemctl status cups
+   sudo apt install printer-driver-all
+   sudo apt install libjpeg62 cups system-config-printer
+   cd linux-UFRII-drv-v600-m17n/
+
+sudo nano /etc/cups/cupsd.conf
+Look for these lines and modify them if necessary:
+# Allow remote administration
+Listen <printer_IP_address>:631
+Allow @LOCAL
+
+sudo systemctl restart cups
+
+sudo apt install sane-airscan
+scanimage -L
+sudo apt install simple-scan
+sudo systemctl restart saned
+scanimage -L
+
+
