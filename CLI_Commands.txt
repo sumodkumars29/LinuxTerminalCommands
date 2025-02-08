@@ -25,7 +25,9 @@ sudo fdsk -l /dev/sda
 
 sudo apt update && sudo apt full-upgrade
 
-lspci | grep -i network
+	lspci | grep -i network
+**The lspci command list all the PCI devices in the system, the '|' pipes the lspci command into the next command, -i flag tell the shell to ingore case senstitivity and grep looks for and prints out all information that hold the term grep.
+
 sudo lshw -C network
 sudo apt install bcmwl-kernel-source
 sudo systemctl start NetworkManager
