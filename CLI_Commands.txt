@@ -1,10 +1,14 @@
-sudo mount /dev/sda3 /mnt
-sudo mount /dev/sda4 /mnt
-
-sudo mount --bind /dev /mnt/dev
-sudo mount --bind /proc /mnt/proc
-sudo mount --bind /sys /mnt/sys
-sudo mount --bind /run /mnt/run
+Mounting the partitions in the drive when using a live usb.
+This needs to be done if you want to make changes to system files while using a live usb enironment.
+    This is mounting the basic partitions (here I was mounting the /root and /home partitions)
+     - sudo mount /dev/sda3 /mnt
+     - sudo mount /dev/sda4 /mnt
+    
+    This is mounting specific config files required to access and process system files
+     - sudo mount --bind /dev /mnt/dev
+     - sudo mount --bind /proc /mnt/proc
+     - sudo mount --bind /sys /mnt/sys
+     - sudo mount --bind /run /mnt/run
 
 sudo chroot /mnt (do what needs to be done, then) --> exit
 
