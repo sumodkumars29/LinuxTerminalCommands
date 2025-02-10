@@ -1,0 +1,5 @@
+GNXS-5G-87E190		SSID
+
+b4:3d:08:87:e1:90	BSSID
+
+1920 168.1.37:41985	IP address and Port

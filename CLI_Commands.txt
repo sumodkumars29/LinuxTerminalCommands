@@ -122,4 +122,356 @@ sudo apt install simple-scan
 sudo systemctl restart saned
 scanimage -L
 
+sudo apt install xsane
+  123  exit
+  124  sudo service saned restart
+  125  history
+  126  scanimage -L
+  127  exit
+  128  git --version
+  129  git config --global user.name "sumodkumars29"
+  130  git config --global user.mail "sumodkumars29@gmail.com"
+  131  git config --list
+  132  cd Desktop/WorkingWithCLI/
+  133  git init
+  134  git status
+  135  git add .
+  136  git status
+  137  git commit -m "Initial Commit"
+  138  ls -a
+  139  git config --global --list
+  140  git config --show-origin --global user.name
+  141  git config --show-origin --global user.email
+  142  ls
+  143  git config --show-origin --global user.email
+  144  git config --show-origin --global user.name
+  145  cd ~
+  146  git config --global user.name "sumodk"
+  147  git config --global user.email "sumodkumars29@gmail.com"
+  148  git config --list
+  149  git config --show-origin --global user.name
+  150  git config --show-origin --global user.email
+  151  git status
+  152  cd Desktop/WorkingWithCLI/
+  153  git status
+  154  git commit -m "Initial Commit"
+  155  git status
+  156  nano CLI_Commands.txt
+  157  git status
+  158  git diff
+  159  git add .
+  160  git status
+  161  git commit -m "added information about the command lspci | grep -i network"
+  162  git status
+  163  git log
+  164  exit
+  165  nvim Desktop/WorkingWithCLI/CLI_Commands.txt
+  166  nvin tutor
+  167  nvim tutor
+  168  ls
+  169  leafpad tutor
+  170  nvim tutor
+  171  leafpad tutor
+  172  exit
+  173  nvim tutor
+  174  leafpad tutor
+  175  exit
+  176  xinput list
+  177  sudo xinput disable 17
+  178  xinput list
+  179  git --version
+  180  sudo apt install git
+  181  git --version
+  182  ls -al ~/ssh
+  183  cd Dsktop
+  184  cd Desktop/
+  185  ls
+  186  mkdir LinuxNotes
+  187  mv CLI_Commands.txt LinuxNotes/
+  188  ls
+  189  ls LinuxNotes/
+  190  cd LinuxNotes/
+  191  git status
+  192  git init
+  193  ls -a
+  194  ls .git
+  195  cd ~
+  196  í² í² cd cd Desktop/LinuxNotes/
+  197  cd Desktop/
+  198  ls
+  199  cd LinuxNotes/
+  200  ls
+  201  ls -al
+  202  rm -rf .git/
+  203  ls -a
+  204  git status
+  205  cd ..
+  206  mv LinuxNotes/ WorkingWithCLI
+  207  ls
+  208  cd WorkingWithCLI/
+  209  ls
+  210  touch gitCommands.txt
+  211  ls
+  212  sudo apt update && sudo apt full-upgrade
+  213  sudo add-apt-repository ppa:neovim-ppa/stable
+  214  sudo apt update
+  215  cd ~
+  216  sudo apt install neovim
+  217  sudo apt update
+  218  ls =al
+  219  ls -al
+  220  cd .config/
+  221  ls -al
+  222  cd ~
+  223  nvim --version
+  224  sudo apt update
+  225  nvim --version
+  226  exit
+  227  ls -al
+  228  cd .config/
+  229  ls -al
+  230  cd ~
+  231  exit
+  232  nvim tutor
+  233  nvim tutor
+  234  nvim
+  235  exit
+  236  nvim --vresion
+  237  nvim --version
+  238  sudo apt intall font-meslo-lg-nerd-font
+  239  sudo apt install font-meslo-lg-nerd-font
+  240  ls /usr/share/applications | grep nvim
+  241  /usr/share/applications
+  242  cd /usr/share/applications
+  243  ls
+  244  ls -F
+  245  nvim nvim.desktop
+  246  cd ~
+  247  nvim tutor
+  248  ls a
+  249  ls -a
+  250  cd .config/
+  251  ls -a
+  252  ls -al
+  253  cd ~
+  254  cd /usr/share/
+  255  ls -a
+  256  cd application
+  257  cd applications
+  258  ls -al
+  259  vim nvim.desktop
+  260  cd ~
+  261  exit
+  262  nvim --cmd 'echo stdpath("config")' --cmd 'q'
+  263  exit
+  264  nvim --cmd 'echo stdpath("config")' --cmd 'q'
+  265  nvim
+  266  cd /home/.config
+  267  cd /hone
+  268  cd /home
+  269  ls
+  270  cd ~
+  271  ls
+  272  cd ..
+  273  ls
+  274  cd sumodk/
+  275  ls
+  276  ls -al
+  277  cd .config/
+  278  ls -a
+  279  ls -al
+  280  mkdir nvim
+  281  ls -al
+  282  cd nvim/
+  283  touch init.vim init.lua
+  284  ls
+  285  nvim init.lua
+  286  nvim
+  287  nvim init.vim
+  288  nvim
+  289  exit
+  290  ls -al /
+  291  ls -al home
+  292  ls -al /home
+  293  ls -al /home/sumodk
+  294  git status
+  295  cd Desktop/
+  296  git status
+  297  cd WorkingWithCLI/
+  298  git stat
+  299  git status
+  300  nvim CLI_Commands.txt
+  301  git status
+  302  git log
+  303  git diff
+  304  git add .
+  305  git status
+  306  git commit -m "Added descriptions to mounting command"
+  307  git status
+  308  git log
+  309  exit
+  310  nvim
+  311  ls
+  312  mv ListForPermits.txt Desktop/
+  313  ls Desktop/
+  314  exit
+  315  okular KL07DF4194
+  316  okular KL07DF4194_FreshPermitApplicationReceipt.pdf
+  317  okular KL07DF4148_FreshPermitApplicationReceipt.pdf
+  318  ls
+  319  okular KL07DF4106_FreshPermitApplicationReceipt.pdf
+  320  okular KL07DF3973_FreshPermitApplicationReceipt.pdf
+  321  ls
+  322  okular KL07DF3941_FreshPermitApplicationReceipt.pdf
+  323  okular KL07DF3941_FreshPermitApplicationReceipt_01Feb2024.pdf
+  324  sudo apt update
+  325  sudo apt install scrcpy
+  326  scrcpy --version
+  327  adb version
+  328  adb devices
+  329  adb tcpip 5555
+  330  adb connect 192.168.1.37:5555
+  331  adb devices
+  332  scrcpy
+  333  adb kill-server
+  334  adb start-server
+  335  adb devices
+  336  adb tcpip 5555
+  337  adb connect 192.168.1.37:5555
+  338  scrcpy
+  339  scrcpy --version
+  340  adb devices
+  341  adb kil-server
+  342  adb kill-server
+  343  adb start-servre
+  344  adb start-server
+  345  adb devices
+  346  adb connect 192.168.1.37:5555
+  347  adb devices
+  348  adb usb
+  349  adb devices
+  350  scrcpy
+  351  adb kill-server
+  352  adb devices
+  353  adb start-server
+  354  adb devices
+  355  scrcpy --encoder=software
+  356  scrcpy --no-hw
+  357  sudo apt remove --purge scrcpy
+  358  adb --version
+  359  sudo apt remove --purge adb
+  360  sudo apt install wget adb ffmpeg libsdl2-2.0-0 -y
+  361  sudo apt autoremove
+  362  wget https://github.com/Genymobile/scrcpy/releases/latest/download/scrcpy-server -O scrcpy-server
+  363  wget https://github.com/Genymobile/scrcpy/releases/download/v2.3/scrcpy-linux-v2.3.zip
+  364  sudo snap install scrcpy
+  365  scrcpy --version
+  366  sudo snap remove --purge scrcpy
+  367  which scrcpy
+  368  adb version
+  369  cd Downloads/scrcpy-master/
+  370  ls
+  371  sudo apt install libavcodec-dev libavformat-dev libavutil-dev libsdl2-dev -y
+  372  chmod +x install_release.sh
+  373  sudo ./install_release.sh
+  374  sudo apt install meson ninja-build pkg-config -y
+  375  sudo ./install_release.sh
+  376  scrcpy --version
+  377  cd ~
+  378  scrcpy --version
+  379  cd Downloads/
+  380  ls
+  381  cd scrcpy-master/
+  382  ls
+  383  rm -rf build-auto/
+  384  sudo rm -rf build-auto/
+  385  ls
+  386  sudo apt update
+  387  sudo apt install ffmpeg libavcodec-dev libavformat-dev libavutil-dev libswresample-dev libavdevice-dev libsdl2-dev adb meson ninja-build pkg-config -y
+  388  sudo apt update
+  389  sudo ./install_release.sh
+  390  sudo rm -rf build-auto/
+  391  ls
+  392  sudo apt install libusb-1.0-0-dev cmake -y
+  393  sudo ./install_release.sh
+  394  scrcpy --version
+  395  cd ~
+  396  scrcpy --version
+  397  cd /
+  398  scrcpy --version
+  399  scrcpy
+  400  which scrcpu
+  401  which scrcpy
+  402  ls -l /usr/local/bin/scrcpy
+  403  /usr/local/bin/scrcpy --version
+  404  export PATH=$PATH:/usr/local/bin
+  405  echo 'export PATH=$PATH:/usr/local/bin' >> ~/.bashrc
+  406  source ~/.bashrc
+  407  scrcpy --version
+  408  which scrcpy
+  409  scrcpy
+  410  scrcpy --otg
+  411  scrcpy
+  412  adb connect 192.168.1.37:5555
+  413  adb tcpip 5555
+  414  adb connect 192.168.1.37:5555
+  415  adb tcpip 5555
+  416  adb devices
+  417  adb tcpip 5555
+  418  adb connect 192.168.1.37:5555
+  419  adb shell ip route
+  420  adb connect 192.168.1.39:5555
+  421  scrcpy
+  422  adb kill-server
+  423  adb status
+  424  adb devices
+  425  history
+  426  cd Desktop/WorkingWithCLI/
+  427  git status
+  428  git --list
+  429  cd ~
+  430  git --list
+  431  git --List
+  432  git config --list
+  433  git remote add origin git@github.com:sumodkumars29/LinuxTerminalCommands.git
+  434  git remote
+  435  ls -al ~/.ssh
+  436  ssh-keygen -t rsa -b 4096 -C "sumodkumars29@gmail.com"
+  437  eval "$(ssh-agent -s)"
+  438  tail ~/.ssh/id_ed25519.pub
+  439  tail ~/.ssh/id_ed32525.pub
+  440  ssh-add ~/.ssh/id_ed25519
+  441  which ssh
+  442  tail ~/.ssh/id_rsa
+  443  tail ~/.ssh/id_rsa.pub
+  444  ssh-add ~/.ssh/id_rsa
+  445  git remote add origin git@github.com:sumodkumars29/LinuxTerminalCommands.git
+  446  cd Desktop/WorkingWithCLI/
+  447  git status
+  448  git remote add origin git@github.com:sumodkumars29/LinuxTerminalCommands.git
+  449  git remote
+  450  git remote -v
+  451  git status
+  452  exit
+  453  cd Desktop/WorkingWithCLI/
+  454  ls
+  455  nvim gitCommands.txt
+  456  git status
+  457  git add gitCommands.txt
+  458  git status
+  459  git branch
+  460  git push origin master
+  461  nvim gitCommands.txt
+  462  git status
+  463  git push origin master
+  464  git status
+  465  git commit -m "Started my git journey"
+  466  git status
+  467  git push origin master
+  468  exit
+  469  chatgot-desktop
+  470  chatgpt-desktop
+  471  whatsapp-electron
+  472  exit
+  473  history
 

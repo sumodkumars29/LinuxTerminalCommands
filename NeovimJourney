@@ -1,0 +1,14 @@
+Installed NeoVim using "sudo apt install nvim"
+
+Can use the arrow keys to navigate the document
+Also can use H (move left), J (move down), K (move up) and L (move right) keys also to navigate the document.
+
+:q  --> exits the editor
+:q! --> exits the editor without saving the changes made.
+
+What you see on the screen is a buffer and virtual place holder for the data you enter. 
+:w  --> writes the new data into the file, meaning the data is saved to the file from the buffer.
+:wq --> writes the new data into the file and exits the editor
+:wq </path/to/file/name>    --> writes the new data and saves a new file ... this instance is only when you want to save to a file that does not yet exits - meaning new file. Used to set the file to a specific path
+:wq <file name>             --> writes the new dataand saves the file ... this instance when you want to save in the current directory.
+
