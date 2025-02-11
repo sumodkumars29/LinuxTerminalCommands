@@ -5,7 +5,86 @@ This needs to be done if you want to make changes to system files while using a 
      - sudo mount /dev/sda4 /mnt
     
     This is mounting specific config files required to access and process system files
-     - sudo mount --bind /dev /mnt/dev
+
+Searches for file.txt in /home and its subdirectories. 
+    find /home -name "file.txt"
+
+Case-insensitive search for file.txt in the current directory (.).
+    find . -iname "file.txt"
+
+Finds all .log files starting from the root (/).
+    find / -type f -name "*.log"
+
+Finds directories named "Documents" in /home.
+    find /home -type d -name "Documents"
+
+Finds files larger than 50MB in /var/log.
+    find /var/log -size +50M
+
+Finds files smaller than 1MB in /home.
+    find /home -size -1M
+
+Finds files modified in the last 7 days.
+    find /home -mtime -7
+
+Finds files last accessed more than 30 days ago.
+    find /home -atime +30
+
+Finds files changed in the last 60 minutes.
+    find /home -cmin -60
+
+Finds files with 644 permissions in /etc.
+    find /etc -type f -perm 644
+
+Finds files that do not have 755 permissions.
+    find /home -type f ! -perm 755
+
+Finds files with the SUID permission.
+    find / -perm /4000
+
+Finds all .txt files in /home and displays their content.
+    find /home -name "*.txt" -exec cat {} \;
+        --> find /home -name "*.txt" --> this part of the command find all files with .txt extension in the /home directory
+        --> -exec --> this executes the command that follows it
+        --> cat --> this is the command that will be executed
+        --> {} --> this holds the result of the command for each file that is found, ...
+        --> much like a for loop variable, finds the text file, prints it out to the terminal and runs again ...
+        --> repeats till it reaches the last file.
+        --> '\;'  or '+' --> this is the escape character needed to exit the command.
+
+Finds and deletes all .log files in /tmp.
+    find /tmp -name "*.log" -exec rm {} \;
+
+Finds .sh files and makes them executable.
+    find . -name "*.sh" -exec chmod +x {} \;
+
+Deletes all .bak files in /var/tmp.
+    find /var/tmp -name "*.bak" -delete
+
+Finds both .mp3 and .wav files.
+    find / -type f \( -name "*.mp3" -o -name "*.wav" \)
+        find /       --> This tells find to search starting from the root directory (/).
+                     --> This means it will scan all directories on the system (which may require sudo for certain locations).
+        -type f      --> This restricts the search to files only (f = file).
+                     --> It will ignore directories.
+        \( and \)    --> Parentheses () are used to group multiple conditions.
+                     --> They need to be escaped (\( and \)) because parentheses have special meaning in the shell.
+                     --> Without escaping, the shell may misinterpret them.
+        -name "*.mp3" --> This searches for files with the .mp3 extension.
+        *             --> is a wildcard, meaning it will match anything before .mp3 (e.g., song.mp3, audio.mp3).
+    -o (OR operator)  --> This means "or"—it allows you to search for multiple file types.
+                      --> Without -o, find would require both conditions to be true at the same time (which is impossible in this case).
+        -name "*.wav" --> This searches for files with the .wav extension.
+        
+        What This Command Does  --> It searches everywhere (/) for files (-type f) that are either: --> MP3 files (*.mp3), OR   WAV files (*.wav)
+
+
+
+
+
+
+
+ - sudo mount --bind /dev /mnt/dev
      - sudo mount --bind /proc /mnt/proc
      - sudo mount --bind /sys /mnt/sys
      - sudo mount --bind /run /mnt/run

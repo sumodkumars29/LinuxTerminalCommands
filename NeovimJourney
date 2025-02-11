@@ -1,14 +1,182 @@
-Installed NeoVim using "sudo apt install nvim"
+
+This is the installation process for NeoVim in Bodhi Limux on a Dell Laptop Inspiron-1545.
+This terminal command adds the stable repo so that the latest version can be downloaded
+    sudo add-apt-repository ppa:neovim-ppa/stable
+
+This terminal command installs NeoVim
+    sudo apt install neovim
+
+This terminal command checks the version of NeoVim installed    
+    nvim --version
+
+This is a Bodhi Linux OS with Boot, Boot/EFI, Root and Home partitions.
+So NeoVim was installed by default in the Root partition at /usr/bin/nvim.
+However NeoVim looks for its configuration files at /home/sumodk/.config
+
+So I used the below command to confirm where NeoVim is looking at to access the config files.
+    nvim --headless +"echo stdpath('config')" +q
+
+The result I got was /home/sumodk/.config
+
+To I navigated to that location with the below command
+    cd /home/sumodk/.config/
+
+Created a folder named "nvim"
+    mkdir nvim
+
+Navigated to the nvim folder and created the init.vim and init.lua files
+    cd nvim
+    touch init.vim init.lua
+
+Added the below configuration line to the init.lua file
+vim.opt.number = true   (shows the line numbers)
+vim.opt.relativenumber = true   (shows relative line numbers)
+vim.opt.tabstop = 4 (sets the tab distance to 4 spaces)
+vim.opt.shiftwidth = 4
+vim.opt.expandtab = true
+vim.opt.clipboard = "unnamedplus"
+vim.opt.termguicolors = true    (sets the colour theme of the editor)
+
+
+ESC:    Brings to NORMAL mode.
+
 
 Can use the arrow keys to navigate the document
-Also can use H (move left), J (move down), K (move up) and L (move right) keys also to navigate the document.
+In NORMAL mode also can use H (move left), J (move down), K (move up) and L (move right) keys also to navigate the document.
 
-:q  --> exits the editor
-:q! --> exits the editor without saving the changes made.
+In NORMAL mode, Shift + 4 or $ takes you to the end of the line the cursor is on.
+
+In NORMAL mode, numeric 0 takes you to the start of the line the cursor is on.
+
+ESC (exiting to NORMAL mode) + :q  --> exits the editor
+
+ESC (exiting to NORMAL mode) + :q! --> exits the editor without saving the changes made.
 
 What you see on the screen is a buffer and virtual place holder for the data you enter. 
-:w  --> writes the new data into the file, meaning the data is saved to the file from the buffer.
-:wq --> writes the new data into the file and exits the editor
-:wq </path/to/file/name>    --> writes the new data and saves a new file ... this instance is only when you want to save to a file that does not yet exits - meaning new file. Used to set the file to a specific path
-:wq <file name>             --> writes the new dataand saves the file ... this instance when you want to save in the current directory.
+
+ESC + :w  --> writes the new data into the file, meaning the data is saved to the file from the buffer.
+
+ESC + :wq --> writes the new data into the file and exits the editor
+
+ESC + :wq </path/to/file/name>    --> writes the new data and saves a new file ... 
+                                  --> this instance is only when you want to save to a file that does not yet exits ...
+                                  --> meaning new file. Used to set the file to a specific path
+                                  --> If a file with the name specified does not exist at the end of the given path, a new file with the specified name is created.
+                                  --> If a file with the specified name exists, then the data already on the file is wiped ...
+                                  --> and the new data from the buffer is inserted.
+
+ESC + :wq <file name>             --> writes the new data and saves the file ... 
+                                  --> this instance is when you want to save a new fle in the current directory. 
+
+In NORMAL mode : 'x'              --> place the cursor over a character and press x to delete it.
+
+In NORMAL mode : 'i'              --> places you in INSERT mode. Now NeoVim behaves like a normal text editor.
+                                  --> places the cursor right before the character the cursor is on when in NORMAL mode.
+                                  --> After making the required changes press ESC to return to NORMAL mode.
+
+In NORMAL mode : 'A'              --> "Shift + a" places the cursor after the last character in the line the cursor is on.
+                                  --> Does not matter where the cursor is on the line "Shift + a" will place the cursor at the end.
+                                  --> It also automatically put you in INSERT mode.
+
+
+In NORMAL mode : 'e'              --> Places the cursor at the last character of the word from where the cursor is currently at.
+                                  --> Stops the last character after which will be a space character.
+                                  --> If the cursor is presently at a space between two words the cursor will move to the ...
+                                  --> last character to the right of where the cursor currently is which is followed by a space.
+
+In NORMAL mode : 'de'             --> Deletes the characters starting from where the cursor is till the end of the word, leaving the space character after it.
+                                  --> To delete a complete word place the cursor at space character before the first letter and type 'de'.
+                                  --> To delete characters from a certain point in a word, place the cursor at the character ...
+                                  --> from where you want to delete and press 'de'.
+                                  --> To delete a certain number of contiguous words place the cursor at the space chatacter ...
+                                  --> before first character of the first word, type 'd', type the number of characters you want to delete and type 'e'.
+
+
+In NORMAL mode : 'w'              --> Places the cursor at the first character after the word from where the cursor is currently at.
+                                  --> Stops after the last character that the cursor moved over is a space.
+                                  --> Meaning if the cursor is presently at a space between two words the cursor will move to the ...
+                                  --> first character to the right of where the cursor currently is.
+
+In NORMAL mode : 'dw'             --> Deletes the characters starting from where the cursor is till the end of the word including the space character after it.
+                                  --> To delete a complete word place the cursor at the first letter and type dw.
+                                  --> To delete a characters from a certain point in a word, place the cursor at the character ...
+                                  --> from where you want to delete and press dw.
+                                  --> To delete a certain number of words place the cursor at the first character of the first word ...
+                                  --> type 'd', type the number of characters you want to delete and type 'w'.
+
+In NORMAL mode : numeric 0        --> Places the cursor at the first character at start of the line the cursor is currently at ...
+                                  --> irresoective of where in the line the cursor is currently at.
+
+In NORMAL mode : d + numeric 0    --> Deletes all character to the left of where the cursor is currently at ..
+                                  --> does not delete the character the cursor is at, only those to the left till the start of the line.
+
+
+In NORMAL mode : '$'              --> Places the cursor at the last character at the end of the line the cursor is currently at ...
+                                  --> irrespective of where in the line the cursor is currently at.
+
+In NORMAL mode : 'd$'             --> d + 'Shift + 4' or d$ deletes till the end of the line the cursor is currently at ...
+                                  --> starting from the character the cursor is currently on ...
+                                  --> and places the cursor on the character before the character the cursor was on at the time of the action.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
