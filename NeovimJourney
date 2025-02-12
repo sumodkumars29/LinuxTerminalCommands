@@ -18,7 +18,7 @@ So I used the below command to confirm where NeoVim is looking at to access the 
 
 The result I got was /home/sumodk/.config
 
-To I navigated to that location with the below command
+So I navigated to that location with the below command
     cd /home/sumodk/.config/
 
 Created a folder named "nvim"
@@ -28,7 +28,7 @@ Navigated to the nvim folder and created the init.vim and init.lua files
     cd nvim
     touch init.vim init.lua
 
-Added the below configuration line to the init.lua file
+Added the below configuration lines to the init.lua file
 vim.opt.number = true   (shows the line numbers)
 vim.opt.relativenumber = true   (shows relative line numbers)
 vim.opt.tabstop = 4 (sets the tab distance to 4 spaces)
@@ -70,6 +70,8 @@ ESC + :wq <file name>             --> writes the new data and saves the file ...
 
 In NORMAL mode : 'x'              --> place the cursor over a character and press x to delete it.
 
+In NORMAL mode : 'r' + *x*        --> place the cursor over a character and press r followed by any character to replace the existing character.
+
 In NORMAL mode : 'i'              --> places you in INSERT mode. Now NeoVim behaves like a normal text editor.
                                   --> places the cursor right before the character the cursor is on when in NORMAL mode.
                                   --> After making the required changes press ESC to return to NORMAL mode.
@@ -78,9 +80,12 @@ In NORMAL mode : 'A'              --> "Shift + a" places the cursor after the la
                                   --> Does not matter where the cursor is on the line "Shift + a" will place the cursor at the end.
                                   --> It also automatically put you in INSERT mode.
 
+In NORMAL mode : 'o'              --> adds a new line below the current line, places the cursor at the start of the line and enters INSERT mode.
+
+In NORMAL mode : 'O' (shift + o)  --> adds a new line above the current line, places the cursor at the start of the line and enters INSERT mode.
 
 In NORMAL mode : 'e'              --> Places the cursor at the last character of the word from where the cursor is currently at.
-                                  --> Stops the last character after which will be a space character.
+
                                   --> If the cursor is presently at a space between two words the cursor will move to the ...
                                   --> last character to the right of where the cursor currently is which is followed by a space.
 
@@ -90,6 +95,15 @@ In NORMAL mode : 'de'             --> Deletes the characters starting from where
                                   --> from where you want to delete and press 'de'.
                                   --> To delete a certain number of contiguous words place the cursor at the space chatacter ...
                                   --> before first character of the first word, type 'd', type the number of characters you want to delete and type 'e'.
+
+In NORMAL mode  'ce'              --> deletes the characters starting from where the cursor is till the end of the word, leaving the space character after it.
+                                  --> to delete an entrie word place the cursor before the first character of the word to be deleted and type 'ce'.
+                                  --> to delete characters from a certain point in a word, place the cursor at the character ...
+                                  --> from where you want to delete and press 'ce'.
+                                  --> To delete a certain number of contiguous words place the cursor at the space character ...
+                                  --> before the first character of the first word, type 'c', type the number of words to delete and type 'e'.
+                                  --> It automatically puts you in INSERT mode so that you can edit or add as required.
+
 
 
 In NORMAL mode : 'w'              --> Places the cursor at the first character after the word from where the cursor is currently at.
@@ -105,63 +119,42 @@ In NORMAL mode : 'dw'             --> Deletes the characters starting from where
                                   --> type 'd', type the number of characters you want to delete and type 'w'.
 
 In NORMAL mode : numeric 0        --> Places the cursor at the first character at start of the line the cursor is currently at ...
-                                  --> irresoective of where in the line the cursor is currently at.
+               or 'HOME'          --> irresoective of where in the line the cursor is currently at.
 
 In NORMAL mode : d + numeric 0    --> Deletes all character to the left of where the cursor is currently at ..
-                                  --> does not delete the character the cursor is at, only those to the left till the start of the line.
+             or  d + 'HOME'       --> does not delete the character the cursor is at, only those to the left till the start of the line.
 
 
-In NORMAL mode : '$'              --> Places the cursor at the last character at the end of the line the cursor is currently at ...
+In NORMAL mode : '$' or 'END'     --> Places the cursor at the last character at the end of the line the cursor is currently at ...
                                   --> irrespective of where in the line the cursor is currently at.
 
 In NORMAL mode : 'd$'             --> d + 'Shift + 4' or d$ deletes till the end of the line the cursor is currently at ...
-                                  --> starting from the character the cursor is currently on ...
+               or 'd' + 'END'     --> starting from the character the cursor is currently on ...
                                   --> and places the cursor on the character before the character the cursor was on at the time of the action.
 
 
+In NORMAL mode : 'p'              -->  To put back text that has just been deleted, type p. This puts the  deleted text AFTER the cursor ...
+                                  --> (if a line was deleted it will go on the line below the cursor). 
+                                  --> You can also put the text before the cursor with P (capital P)
 
 
+In NORMAL mode : '^g'             --> Shows the filename, position of the cursor (on which line the cursor is currently), % of document that is scrolled ...
+                                  --> and also at which character in the line the cursor is. So if you place the cursor at the character '@' and type ...
+                                  --> ^g it will tell you that the cursor is at line 142 and at the 139 character position in the line.
+
+In NORMAL mode : 'G' (shift + g)  --> Places you at the bottom of the file.
+
+In Normal mode : 'gg'             --> Places you at the start of the file.
+
+In Normal Node : number + 'G'     --> Places you at the specified line number.
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+b - backwards
+f - find in line to right
+F - find in line to left
+t - to specified char in line towards right
+T - to specified char in line towards left
+H - M - L
 
 
 

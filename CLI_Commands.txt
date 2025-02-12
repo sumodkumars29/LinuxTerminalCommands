@@ -553,4 +553,172 @@ sudo apt install xsane
   471  whatsapp-electron
   472  exit
   473  history
+  619  nvim Desktop/WorkingWithCLI/NeovimJourney
+  620  nvim --version
+  621  cd ~/.config/nvim/init.lua
+  622  cd ~/.config/nvim/
+  623  ls
+  624  nvim init.lua
+  625  ls ~/.local/share/nvim/site/pack/packer/start/
+  626  ls ~/.local/share/nvim
+  627  git clone --depth 1 https://github.com/wbthomason/packer.nvim \ ~/.local/share/nvim/site/pack/packer/start/packer.nvim
+  628  ls ~/.local/share/nvim/site/pack/packer/start/
+  629  file / -name *packer*
+  630  find / -name *packer*
+  631  nvim ~/.config/nvim/init.lua
+  632  nvim
+  633  cd ~
+  634  nvim
+  635  nvim ~/.config/nvim/init.lua
+  636  nvim
+  637  nvim ~/.config/nvim/init.lua
+  638  nvim
+  639  nvim ~/.config/nvim/init.lua
+  640  nvim
+  641  nvim ~/.config/nvim/init.lua
+  642  exit
+  643  ls ~/.local/share/nvim/site/pack/packer/start/
+  644  find /home -iname "packer"
+  645  :packadd packer.nvim
+  646  nvim ./.config/nvim/init.lua
+  647  ls
+  648  cd -l
+  649  ls -al
+  650  cd .config
+  651  ls
+  652  cd nvim
+  653  ls
+  654  ls -al
+  655  cd ' ~'/
+  656  ls -al
+  657  cd ../..
+  658  cd nvim\
+  659  cd nvim
+  660  ls -al
+  661  cd \ ~/.local/
+  662  ls
+  663  ls -al
+  664  cd share/
+  665  ls -al
+  666  ls nvim/
+  667  mv site ~/.config/nvim/
+  668  cd ..
+  669  mv ~/.config/nvim/\ ~/.local ~/.config/nvim/
+  670  ls -al
+  671  ls .local/
+  672  cd share
+  673  cd .local/share/
+  674  ls -al
+  675  cd nvim
+  676  ls -al
+  677  ls site
+  678  cd site/pack
+  679  ls -al
+  680  ls al
+  681  ls -al
+  682  cd packer/
+  683  ls -al
+  684  ls /start/
+  685  ls start/
+  686  ls start/packer.nvim/
+  687  cd ~
+  688  ls -al
+  689  mv ~/.config/nvim/.local/share/ ~/.local/
+  690  cd .local/
+  691  ls
+  692  ls -al
+  693  cd share/
+  694  ls -al
+  695  cd nvim
+  696  ls -al
+  697  mv ~/.config/nvim/.local/share/ ~/.local/share/nvim/
+  698  ls -l ~/.local/share/nvim/site/pack/packer/start/packer.nvim
+  699  find /home/sumodk -name "packer.nvim"
+  700  cd ~
+  701  ls -al
+  702  ls ~/.local/
+  703  ls /home
+  704  ls ~/.local/share/
+  705  mkdir tempFolder
+  706  mv /home/sumodk/.local/share/nvim/share tempFolder/
+  707  ls tempFolder/
+  708  ls /home/sumodk/.local//share/nvim
+  709  ls /home/sumodk/.local/share/nvim
+  710  ls tempFolder/
+  711  cd share
+  712  ls tempFolder/share
+  713  cd tempFolder/share/nvim/
+  714  ls -al
+  715  ls site
+  716  ls site/pack/
+  717  cd site/pack/packer/
+  718  ls -al
+  719  ls start
+  720  cd start/packer.nvim/
+  721  ls -al
+  722  mv ~/tempFolder/share/nvim/site/ /home/sumodk/.local/share/nvim
+  723  ls -l ~/.local/share/nvim/site/pack/packer/start/packer.nvim
+  724  mv ~/tempFolder/share/nvim/site/ /home/sumodk/.local/share/nvim
+  725  exit
+  726  nvim
+  727  exit
+  728  nvim
+  729  nvim ~/.config/nvim/init.lua
+  730  sudo apt remove --purge neovim -y
+  731  sudo apt remove --purge packer
+  732  ls ~/.config/
+  733  rm -rf ~/.config/nvim/ ~/tempFolder/
+  734  ls ~/.config/
+  735  ls -al ~/.local/
+  736  ls -al ~/.local/share
+  737  ls -al ~/.local/share/nvim/
+  738  ls -al ~/.local/share/nvim/site
+  739  rm -rf ~/.local/share/nvim
+  740  find /home/ -iname "*vim"
+  741  rm -rf /home/sumodk/.cache/nvim/
+  742  ls -al /home/sumodk/.cache
+  743  sudo apt update
+  744  sudo apt install -y ninja-build gettext cmake unzip curl build-essential
+  745  cd Downloads/
+  746  ls
+  747  cd neovim-master
+  748  make CMAKE_BUILD_TYPE=Release
+  749  sudo make install
+  750  cd ~
+  751  nvim --version
+  752  find /home -iname "*vim*"
+  753  find /home/.config -iname "*vim*"
+  754  ls home/
+  755  find /home/sumodk/.config -iname "*vim*"
+  756  cd home
+  757  ls
+  758  cd ..
+  759  ls -al
+  760  cd sumodk/
+  761  ls -al
+  762  cd .config/
+  763  ls -al
+  764  cd /home/sumodk/Downloads/neovim-master
+  765  make clean
+  766  sudo make cleam
+  767  sudo make clean
+  768  cd ~
+  769  nvim
+  770  mkdir -p ~/.config/nvim
+  771  nvim ~/.config/nvim/init.lua
+  772  nvim Desktop/WorkingWithCLI/NeovimJourney
+  773  nvim ~/.config/nvim/init.lua
+  774  ls .
+  775  ls -al
+  776  cd .config/
+  777  ls -al
+  778  cd nvim
+  779  ls -al
+  780  ls -al plugin/
+  781  mkdir -p lua/sumod/core
+  782  ls -al
+  783  ls lua/sumod/
+  784  mkdir lua/sumod/plugins
+  785  touch lua/sumod/lazy.lua
+  786  nvim .
 
