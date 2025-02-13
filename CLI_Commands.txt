@@ -204,7 +204,6 @@ scanimage -L
 sudo apt install xsane
   123  exit
   124  sudo service saned restart
-  125  history
   126  scanimage -L
   127  exit
   128  git --version
@@ -504,7 +503,6 @@ sudo apt install xsane
   422  adb kill-server
   423  adb status
   424  adb devices
-  425  history
   426  cd Desktop/WorkingWithCLI/
   427  git status
   428  git --list
@@ -552,7 +550,6 @@ sudo apt install xsane
   470  chatgpt-desktop
   471  whatsapp-electron
   472  exit
-  473  history
   619  nvim Desktop/WorkingWithCLI/NeovimJourney
   620  nvim --version
   621  cd ~/.config/nvim/init.lua
@@ -721,4 +718,111 @@ sudo apt install xsane
   784  mkdir lua/sumod/plugins
   785  touch lua/sumod/lazy.lua
   786  nvim .
+  789  nvim ~/Desktop/WorkingWithCLI/CLI_Commands.txt
+  790  cd Desktop/WorkingWithCLI/
+  791  git status
+  792  git add .
+  793  git commit -m "updated Neovim with navigation commands and CLI with today's history"
+  794  git status
+  795  git push origin master
+  796  git log oneline
+  797  git log -oneline
+  798  git log --oneline
+  799  exit
+  800  node --version
+  801  ripgrep --version
+  802  exit
+  803  ls -l ~/.local/share/nvim/lazy/lazy.nvim
+  804  it clone --filter=blob:none https://github.com/folke/lazy.nvim.git --branch=stable ~/.local/share/nvim/lazy/lazy.nvim
+  805  git clone --filter=blob:none https://github.com/folke/lazy.nvim.git --branch=stable ~/.local/share/nvim/lazy/lazy.nvim
+  806  cd ~/.local/share/nvim//lazy/
+  807  ls
+  808  ls lazy.nvim/
+  809  ls
+  810  lazy.nvim/
+  811  ls lazy.nvim/
+  812  ls -al
+  813  cd lazy.nvim/
+  814  ls -al
+  815  ls
+  816  ls -al
+  817  cd ..
+  818  rm -rf lazy.nvim/
+  819  mkdir lazy.nvim
+  820  cd ~
+  821  git clone --filter=blob:none https://github.com/folke/lazy.nvim.git --branch=stable ~/.local/share/nvim/lazy/lazy.nvim
+  822  sudo apt update
+  823  sudo apt install tmux
+  824  tmux --version
+  825  tmux -v
+  826  tmux -V
+  827  /home/sumodk/.config/terminology/background/
+  828  cd /home/sumodk/.config/terminology/background/
+  829  ls -al
+  830  mkdir -p ~/.local/share/fonts
+  831  cd ~/.local/share/fonts
+  832  wget https://github.com/ryanoasis/nerd-fonts/releases/latest/download/Meslo.zip
+  833  unzip Meslo.zip -d MesloLGS
+  834  rm Meslo.zip
+  835  fc-cache -fv
+  836  fc-list | grep "MesloLGS"
+  837  source ~/.bashrc
+  838  exit
+  839  nvim .
+  840  cd .config/nvim/
+  841  nvim .
+  842  exit
+  843  cd Desktop/BackgroundImages/
+  844  ls
+  845  mv BG1.png BG1_6c13b2.png
+  846  ls
+  847  cd .config/nvim/
+  848  echo globpath(&runtimepath, 'lua/plenary/init.lua')
+  849  echo globpath\(&runtimepath, 'lua/plenary/init.lua'\)
+  850  ls -l ~/.local/share/nvim/site/pack/*/start/plenary.nvim
+  851  ls -l ~/.local/share/nvim/lazy/plenary.nvim
+  852  cd ~/.config/nvim
+  853  ls -al
+  854  showkey -a
+  855  exit
+  856  cd Downloads/neovim-master
+  857  nvim .
+  858  cd ~/.config/nvim/
+  859  nvim .
+  860  ripgrep -V
+  861  ripgrep -v
+  862  ripgrep --version
+  863  nvim .
+  864  nvim clean
+  865  nvim --clean
+  866  nvim .
+  867  showkey -a
+  868  exit
+  869  cd ~/.config/nvim/
+  870  nvimi .
+  871  nvim .
+  872  exit
+  873  cd ./.config/nvim/
+  874  nvim .
+  875  rm ./.config/nvim/lua/sumod/plugins/fuzzyfinder.lua
+  876  cd ./.config/nvim/
+  877  ls -al
+  878  git init
+  879  git status
+  880  git log
+  881  echo globpath(&runtimepath, 'lua/lualine/init.lua')
+  882  cd ./.config/nvim/
+  883  nvim .
+  884  git status
+  885  git add .
+  886  git status
+  887  git commit -m "Initial commit for my NeoVim setup and Journey"
+  888  git status
+  889  git push origin main
+  890  git remote -v
+  891  ssh -T git@github.com
+  892  git push origin main
+  893  git remote set-url origin git@github.com:sumodkumars29/noevimJourney.git
+  894  git remote -v
+  895  git push origin main
 
