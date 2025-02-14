@@ -37,6 +37,53 @@ vim.opt.expandtab = true
 vim.opt.clipboard = "unnamedplus"
 vim.opt.termguicolors = true    (sets the colour theme of the editor)
 
+After all this I had to reinstall Neovim since the version I had was 0.7 and Lua was only compatible with 0.8 and upwards.
+
+So I downloaded the NeoVim Git repo from "https://github.com/neovim/neovim.git" and had to use ChatGPT to find the right terminal commands to install it.
+
+Remove NeoVim installation 
+  sudo apt remove --purge neovim -y
+
+Remove the software 'packer'
+  sudo apt remove --purge packer
+
+Remove the existing neovim configuration file and the temp file created
+  rm -rf ~/.config/nvim/ ~/tempFolder/
+
+Remove noevim cached files from system.
+  rm -rf /home/sumodk/.cache/nvim/
+
+Update the system
+  sudo apt update
+
+Install ninja-build, gettext, cmake, unzip, curl and build-essential packages.
+  sudo apt install -y ninja-build gettext cmake unzip curl build-essential
+
+Change directory into where neovim was downloaded.
+  cd neovim-master
+
+Terminal command to build the NeoVim installation script using cmake.
+  make CMAKE_BUILD_TYPE=Release
+
+Terminal command to install NeoVim using the make app.
+  sudo make install
+
+Check which version of NeoVim is installed.
+  nvim --version
+
+Remove unwanted file created by make.
+  sudo make clean
+
+Make a directory called 'nvim' at /home/sumodk/.config
+  mkdir -p ~/.config/nvim
+
+Use 'nvim' to create and open a file names init.lua at /home/sumodk/.config/nvim.
+  nvim ~/.config/nvim/init.lua
+
+
+
+
+
 
 ESC:    Brings to NORMAL mode.
 

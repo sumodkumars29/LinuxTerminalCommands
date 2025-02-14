@@ -1,0 +1,82 @@
+Keyboard shortcuts and their usage:
+
+^  if used before a character means the Ctrl key.
+! if used before a character means the Shift key.
+
+
+
+'$' or '!4'             --> Places the cursor at the last character of the line.
+
+'^' or '!6'             --> Places the cursor at the first non-blank character in the line.
+
+v                       --> go into VISUAL mode and then use h, j, k or l as required to select. Selection starts from the character ...
+                        --> the cursor is on at the time of key press. Arrows can also be used.
+
+^v                      --> go into VISUAL mode and then use h. j. k or l or the arrow key to select in a single line in any of the four directions
+                        --> combine this with r'x' where x is a desired character and you can change all characters in the selection ...
+                        --> can be used to change characters in code where they are stacked one below the other in alignment.
+
+!v or V                 --> go into VISUAL mode and then use h, j or the up and down arrows keys to select in blocks.
+                        --> the first press of !v selects the entire line the cursor is at.
+
+
+'!l' or 'shift + l'     --> move the cursor to the bottom of page visible on the monitor ...
+                        --> (does not move the page up only the cursor)
+
+'zb'                    --> moves page from where the cursor is located to the bottom of the visible screen ...
+                        --> in effect you have scrolled down bringing the cursor to the bottom of the screen.
+
+'!h' or 'shift + h'     --> move the cursor to the top of the page visible on the monitor ...
+                        --> (does not move the page down, only the cursor)
+
+zt                      --> moves the page up.. it is like you hold the page at where the cursor is and drag up ...
+                        --> stops when the cursor reaches the top of the monitor.
+
+
+
+
+
+
+return {
+  {
+    "folke/tokyonight.nvim",
+    priority = 1000, -- make sure to load this before all the other start plugins
+    config = function()
+      local bg = "#011628"
+      local bg_dark = "#011423"
+      local bg_highlight = "#143652"
+      local bg_search = "#0A64AC"
+      local bg_visual = "#275378"
+      local fg = "#CBE0F0"
+      local fg_dark = "#B4D0E9"
+      local fg_gutter = "#627E97"
+      local border = "#547998"
+
+      require("tokyonight").setup({
+        style = "night",
+        on_colors = function(colors)
+          colors.bg = bg
+          colors.bg_dark = bg_dark
+          colors.bg_float = bg_dark
+          colors.bg_highlight = bg_highlight
+          colors.bg_popup = bg_dark
+          colors.bg_search = bg_search
+          colors.bg_sidebar = bg_dark
+          colors.bg_statusline = bg_dark
+          colors.bg_visual = bg_visual
+          colors.border = border
+          colors.fg = fg
+          colors.fg_dark = fg_dark
+          colors.fg_float = fg
+          colors.fg_gutter = fg_gutter
+          colors.fg_sidebar = fg_dark
+        end,
+      })
+      -- load the colorscheme here
+      vim.cmd([[colorscheme tokyonight]])
+    end, },
+}
+
+
+
+
