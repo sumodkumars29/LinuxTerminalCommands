@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 This is the installation process for NeoVim in Bodhi Limux on a Dell Laptop Inspiron-1545.
 This terminal command adds the stable repo so that the latest version can be downloaded
     sudo add-apt-repository ppa:neovim-ppa/stable
@@ -15,33 +16,28 @@ However NeoVim looks for its configuration files at /home/sumodk/.config
 
 So I used the below command to confirm where NeoVim is looking at to access the config files.
     nvim --headless +"echo stdpath('config')" +q
+=======
+This is the installation process for nvim in Bodhi Limux on a Dell Laptop Inspiron-1545.
+This terminal command adds the stable repo so that the latest version can be downloaded
+    sudo add-apt-repository ppa:neovim-ppa/stable
+
+This terminal command installs nvim
+    sudo apt install neovim
+
+This terminal command checks the version of nvim installed    
+nvim --version
+
+This is a Bodhi Linux OS with Boot, Boot/EFI, Root and Home partitions.
+So nvim was installed by default in the Root partition at /usr/bin/nvim.
+However nvim looks for its configuration files at /home/sumodk/.config
+
+So I used the below command to confirm where nvim is looking at to access the config files.
+nvim --headless +"echo stdpath('config')" +q
+>>>>>>> 2d085f1 (updated with the latest neowim config that works)
 
 The result I got was /home/sumodk/.config
 
 So I navigated to that location with the below command
-    cd /home/sumodk/.config/
-
-Created a folder named "nvim"
-    mkdir nvim
-
-Navigated to the nvim folder and created the init.vim and init.lua files
-    cd nvim
-    touch init.vim init.lua
-
-Added the below configuration lines to the init.lua file
-vim.opt.number = true   (shows the line numbers)
-vim.opt.relativenumber = true   (shows relative line numbers)
-vim.opt.tabstop = 4 (sets the tab distance to 4 spaces)
-vim.opt.shiftwidth = 4
-vim.opt.expandtab = true
-vim.opt.clipboard = "unnamedplus"
-vim.opt.termguicolors = true    (sets the colour theme of the editor)
-
-After all this I had to reinstall Neovim since the version I had was 0.7 and Lua was only compatible with 0.8 and upwards.
-
-So I downloaded the NeoVim Git repo from "https://github.com/neovim/neovim.git" and had to use ChatGPT to find the right terminal commands to install it.
-
-Remove NeoVim installation 
   sudo apt remove --purge neovim -y
 
 Remove the software 'packer'
@@ -62,6 +58,7 @@ Install ninja-build, gettext, cmake, unzip, curl and build-essential packages.
 Change directory into where neovim was downloaded.
   cd neovim-master
 
+<<<<<<< HEAD
 Terminal command to build the NeoVim installation script using cmake.
   make CMAKE_BUILD_TYPE=Release
 
@@ -72,6 +69,18 @@ Check which version of NeoVim is installed.
   nvim --version
 
 Remove unwanted file created by make.
+=======
+Terminal command to build the nvim installation script using cmake.
+  make CMAKE_BUILD_TYPE=Release
+
+Terminal command to install nvim using the make app.
+  sudo make install
+
+Check which version of nvim is installed.
+  nvim --version
+
+
+>>>>>>> 2d085f1 (updated with the latest neowim config that works)
   sudo make clean
 
 Make a directory called 'nvim' at /home/sumodk/.config
@@ -119,7 +128,11 @@ In NORMAL mode : 'x'              --> place the cursor over a character and pres
 
 In NORMAL mode : 'r' + *x*        --> place the cursor over a character and press r followed by any character to replace the existing character.
 
+<<<<<<< HEAD
 In NORMAL mode : 'i'              --> places you in INSERT mode. Now NeoVim behaves like a normal text editor.
+=======
+In NORMAL mode : 'i'              --> places you in INSERT mode. Now nvim behaves like a normal text editor.
+>>>>>>> 2d085f1 (updated with the latest neowim config that works)
                                   --> places the cursor right before the character the cursor is on when in NORMAL mode.
                                   --> After making the required changes press ESC to return to NORMAL mode.
 

@@ -1,0 +1,14 @@
+0000000000000000000000000000000000000000 7b8a5fc94d90aee628c0206ca3ef254d6c140ef4 sumodk <sumodkumars29@gmail.com> 1739019116 +0530	commit (initial): Initial Commit
+7b8a5fc94d90aee628c0206ca3ef254d6c140ef4 df3f21d03b37658749729c04da0ca79673b47943 sumodk <sumodkumars29@gmail.com> 1739019466 +0530	commit: added information about the command lspci | grep -i network
+df3f21d03b37658749729c04da0ca79673b47943 d77a7dda0ccf8b446efb90f4bb67cac2677c544c sumodk <sumodkumars29@gmail.com> 1739121235 +0530	commit: Added descriptions to mounting command
+d77a7dda0ccf8b446efb90f4bb67cac2677c544c 0adb4f67a96a5744935b8b2161c5c3770e2d820d sumodk <sumodkumars29@gmail.com> 1739204827 +0530	commit: Started my git journey
+0adb4f67a96a5744935b8b2161c5c3770e2d820d b6eda2af188a08b3751a31ae1730b4be29c6bef1 sumodk <sumodkumars29@gmail.com> 1739209689 +0530	commit: Backup files for the 10th of Feb 2025
+b6eda2af188a08b3751a31ae1730b4be29c6bef1 b0f600207872e7ea1331917c608420a365e93304 sumodk <sumodkumars29@gmail.com> 1739296131 +0530	commit: Updated Neovim and CLI file
+b0f600207872e7ea1331917c608420a365e93304 0000000000000000000000000000000000000000 sumodk <sumodkumars29@gmail.com> 1739296188 +0530	Branch: renamed refs/heads/master to refs/heads/main
+0000000000000000000000000000000000000000 b0f600207872e7ea1331917c608420a365e93304 sumodk <sumodkumars29@gmail.com> 1739296188 +0530	Branch: renamed refs/heads/master to refs/heads/main
+b0f600207872e7ea1331917c608420a365e93304 0000000000000000000000000000000000000000 sumodk <sumodkumars29@gmail.com> 1739296267 +0530	Branch: renamed refs/heads/main to refs/heads/master
+0000000000000000000000000000000000000000 b0f600207872e7ea1331917c608420a365e93304 sumodk <sumodkumars29@gmail.com> 1739296267 +0530	Branch: renamed refs/heads/main to refs/heads/master
+b0f600207872e7ea1331917c608420a365e93304 e175fd9a6c04393ce9ff1c8c2f4668770158600b sumodk <sumodkumars29@gmail.com> 1739388816 +0530	commit: updated Neovim with navigation commands and CLI with today's history
+e175fd9a6c04393ce9ff1c8c2f4668770158600b 701fe75573729a38abacf14bb6ee8ab758a008ba sumodk <sumodkumars29@gmail.com> 1739474503 +0530	commit: Commands used to get git and NeoVim Lua set up
+701fe75573729a38abacf14bb6ee8ab758a008ba 4ae151f7ba56d9237501153b3eb6ed1fc397379b sumodk <sumodkumars29@gmail.com> 1739553892 +0530	commit: Updated a few features in NeoVinJourney and created a new file for concise shorcut details to print
+4ae151f7ba56d9237501153b3eb6ed1fc397379b 882ecb7c81a05d226a2abf3696493275467c3cce sumodk <sumodkumars29@gmail.com> 1743089081 +0530	commit: this is the latest commit

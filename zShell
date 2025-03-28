@@ -1,0 +1,10 @@
+Use the below command to open the first time landing page when you open zsh.
+autoload -Uz zsh-newuser-install
+  zsh-newuser-install -f
+
+
+Backup of the original ~/.zshrc file (zShell configuration file)
+New config: ~/.p10k.zsh.
+Backup of ~/.zshrc: /tmp/.zshrc.1uJcjAUMuK.
+
+
